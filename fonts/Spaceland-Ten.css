@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'spaceland_ten';
+	src: url('Spaceland-Ten.woff2') format('WOFF2'),
+		url('Spaceland-Ten.woff') format('WOFF');
+	font-weight: normal;
+	font-style: normal;
+}
