@@ -41,16 +41,29 @@ a.link::before {
   height: 1px;
   content: "";
   background: #f00044;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  transform-origin: 50% 0;
-  transform: scale(0);
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
 }
 a.link:hover::before {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 .nowrap,
 .nbsp {
   white-space: nowrap;
+}
+body {
+  background: #f7fcfc url("../img/back.png") 50% 0 repeat;
+  background-size: 1342px auto;
+  background-attachment: fixed;
 }
 .table100,
 .ttsAnnounce {
@@ -178,7 +191,8 @@ textarea:focus {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2225%22%20height%3D%2225%22%20viewBox%3D%220%200%2025%2025%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M22.5769%206.76746C21.2643%206.76746%2020.0532%206.33261%2019.0807%205.59904C17.9652%204.7581%2017.1638%203.52455%2016.8808%202.10277C16.8108%201.75148%2016.773%201.38896%2016.7694%201.01746H13.0198V11.2632L13.0153%2016.8753C13.0153%2018.3757%2012.0383%2019.6479%2010.6839%2020.0953C10.2908%2020.2252%209.86628%2020.2867%209.42425%2020.2624C8.86003%2020.2314%208.3313%2020.0612%207.87175%2019.7863C6.8938%2019.2014%206.23076%2018.1403%206.21279%2016.9265C6.18449%2015.0295%207.71812%2013.4828%209.61382%2013.4828C9.98802%2013.4828%2010.3474%2013.5439%2010.6839%2013.6549V10.8544V9.84775C10.329%209.79519%209.96781%209.76779%209.60259%209.76779C7.52765%209.76779%205.58703%2010.6303%204.19984%2012.1841C3.15136%2013.3584%202.52246%2014.8565%202.42543%2016.4275C2.2983%2018.4912%203.05343%2020.4529%204.51789%2021.9003C4.73306%2022.1128%204.95902%2022.31%205.19531%2022.4919C6.45087%2023.4582%207.98585%2023.982%209.60259%2023.982C9.96781%2023.982%2010.329%2023.955%2010.6839%2023.9025C12.1941%2023.6787%2013.5876%2022.9874%2014.6873%2021.9003C16.0385%2020.5648%2016.7852%2018.7917%2016.7932%2016.9045L16.7739%208.5239C17.4186%209.02119%2018.1234%209.43267%2018.8799%209.75207C20.0564%2010.2485%2021.3038%2010.5%2022.5877%2010.4996V7.77685V6.76656C22.5886%206.76746%2022.5778%206.76746%2022.5769%206.76746Z%22%20fill%3D%22%23F00044%22%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 .ttsKernel {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 1260px;
   margin: 0 auto;
   position: relative;
@@ -194,6 +208,12 @@ textarea:focus {
 }
 .ttsKernel.iBackstage {
   padding-top: 100px;
+}
+.ttsKernel.iBackstage .ttsH2,
+.ttsKernel.iBackstage .ttsHero,
+.ttsKernel.iBackstage .ttsForm__header,
+.ttsKernel.iBackstage .ttsAlert__header {
+  padding-bottom: 20px;
 }
 .ttsLogo {
   display: block;
@@ -215,7 +235,8 @@ textarea:focus {
 }
 .ttsHero {
   max-width: 1360px;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   padding: 0 1em;
   margin: 0 auto;
   text-align: center;
@@ -229,7 +250,8 @@ textarea:focus {
 }
 .ttsSubHero {
   max-width: 760px;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   padding: 0 1em;
   margin: 0 auto;
   text-align: center;
@@ -244,14 +266,16 @@ textarea:focus {
 }
 .ttsVideo {
   max-width: 820px;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 80px;
   clear: both;
 }
 .ttsVideo__frame {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
@@ -265,9 +289,11 @@ textarea:focus {
 .ttsAnnounce {
   padding: 40px 25px;
   background: #fff;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 80px;
-  box-shadow: 0px 128px 128px rgba(234, 235, 243, 0.2), 0px 64px 64px rgba(234, 235, 243, 0.2), 0px 32px 32px rgba(234, 235, 243, 0.2), 0px 16px 16px rgba(234, 235, 243, 0.2), 0px 8px 8px rgba(234, 235, 243, 0.2), 0px 4px 4px rgba(234, 235, 243, 0.2);
+  -webkit-box-shadow: 0px 128px 128px rgba(234, 235, 243, 0.2), 0px 64px 64px rgba(234, 235, 243, 0.2), 0px 32px 32px rgba(234, 235, 243, 0.2), 0px 16px 16px rgba(234, 235, 243, 0.2), 0px 8px 8px rgba(234, 235, 243, 0.2), 0px 4px 4px rgba(234, 235, 243, 0.2);
+          box-shadow: 0px 128px 128px rgba(234, 235, 243, 0.2), 0px 64px 64px rgba(234, 235, 243, 0.2), 0px 32px 32px rgba(234, 235, 243, 0.2), 0px 16px 16px rgba(234, 235, 243, 0.2), 0px 8px 8px rgba(234, 235, 243, 0.2), 0px 4px 4px rgba(234, 235, 243, 0.2);
   border-radius: 40px;
 }
 @media screen and (max-width: 768px) {
@@ -328,29 +354,30 @@ textarea:focus {
 }
 .ttsAcross {
   position: relative;
-  background: #151515;
-  z-index: 10;
+  padding: 20px 0;
 }
-.ttsAcross::before,
-.ttsAcross::after {
+.ttsAcross::before {
   content: "";
-  display: block;
-  background: #151515;
-  height: 50px;
-  top: -25px;
-  transform: skewY(1.5deg);
-  position: relative;
-  z-index: 9;
-}
-.ttsAcross::after {
-  top: auto;
-  bottom: -25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: skewY(1.5deg);
+      -ms-transform: skewY(1.5deg);
+          transform: skewY(1.5deg);
+  background: #151515 url("../img/back_form.png") 50% 50% no-repeat;
+  background-size: 1326px auto;
+  background-attachment: fixed;
 }
 .ttsForm {
   max-width: 1146px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 20px 50px 0;
   margin: 0 auto;
+  position: relative;
+  z-index: 20;
 }
 @media screen and (max-width: 768px) {
   .ttsForm {
@@ -367,6 +394,35 @@ textarea:focus {
   padding-bottom: 50px;
   color: #fff;
 }
+.ttsForm__agreement {
+  color: #fff;
+  text-align: center;
+}
+.ttsForm__agreement label span {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  z-index: 3;
+  border: 1px solid #08fff9;
+  border-radius: 5px;
+}
+.ttsForm__agreement input[type=checkbox] {
+  opacity: 0;
+  position: relative;
+  z-index: 0;
+  left: 20px;
+}
+.ttsForm__agreement input[type=checkbox]:checked + span {
+  background: url("data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2212%22%20viewBox%3D%220%200%2018%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1%204L7.5%2010.5L17%201%22%20stroke%3D%22%2308FFF9%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A") 50% 50% no-repeat;
+  color: #fff;
+}
 .ttsForm input[type=text],
 .ttsForm input[type=submit],
 .ttsForm input[type=date],
@@ -377,15 +433,30 @@ textarea:focus {
 .ttsForm__date,
 .ttsForm__file {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   width: 100%;
   padding: 27px 20px;
   border: 1px solid #08fff9;
   border-radius: 25px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
+  background: #151515;
   margin: 0;
-  background: transparent;
+  color: #fff;
+}
+.ttsForm input[type=text]::-webkit-input-placeholder, .ttsForm input[type=submit]::-webkit-input-placeholder, .ttsForm input[type=date]::-webkit-input-placeholder, .ttsForm input[type=number]::-webkit-input-placeholder, .ttsForm input[type=email]::-webkit-input-placeholder, .ttsForm select::-webkit-input-placeholder, .ttsForm .select2::-webkit-input-placeholder, .ttsForm__date::-webkit-input-placeholder, .ttsForm__file::-webkit-input-placeholder {
+  color: #fff;
+}
+.ttsForm input[type=text]::-moz-placeholder, .ttsForm input[type=submit]::-moz-placeholder, .ttsForm input[type=date]::-moz-placeholder, .ttsForm input[type=number]::-moz-placeholder, .ttsForm input[type=email]::-moz-placeholder, .ttsForm select::-moz-placeholder, .ttsForm .select2::-moz-placeholder, .ttsForm__date::-moz-placeholder, .ttsForm__file::-moz-placeholder {
+  color: #fff;
+}
+.ttsForm input[type=text]:-ms-input-placeholder, .ttsForm input[type=submit]:-ms-input-placeholder, .ttsForm input[type=date]:-ms-input-placeholder, .ttsForm input[type=number]:-ms-input-placeholder, .ttsForm input[type=email]:-ms-input-placeholder, .ttsForm select:-ms-input-placeholder, .ttsForm .select2:-ms-input-placeholder, .ttsForm__date:-ms-input-placeholder, .ttsForm__file:-ms-input-placeholder {
+  color: #fff;
+}
+.ttsForm input[type=text]::-ms-input-placeholder, .ttsForm input[type=submit]::-ms-input-placeholder, .ttsForm input[type=date]::-ms-input-placeholder, .ttsForm input[type=number]::-ms-input-placeholder, .ttsForm input[type=email]::-ms-input-placeholder, .ttsForm select::-ms-input-placeholder, .ttsForm .select2::-ms-input-placeholder, .ttsForm__date::-ms-input-placeholder, .ttsForm__file::-ms-input-placeholder {
   color: #fff;
 }
 .ttsForm input[type=text]::placeholder,
@@ -421,7 +492,8 @@ textarea:focus {
 .ttsForm .select2:focus,
 .ttsForm__date:focus,
 .ttsForm__file:focus {
-  box-shadow: 0px 9px 36px rgba(91, 0, 177, 0.31);
+  -webkit-box-shadow: 0px 9px 36px rgba(91, 0, 177, 0.31);
+          box-shadow: 0px 9px 36px rgba(91, 0, 177, 0.31);
 }
 .ttsForm ::-webkit-calendar-picker-indicator {
   width: 46px;
@@ -432,19 +504,20 @@ textarea:focus {
   right: 10px;
 }
 .ttsForm input[type=file] {
-  visibility: hidden;
-  height: 0;
-  width: 0;
-  overflow: hidden;
+  opacity: 0;
+  position: absolute;
 }
 .ttsForm__file {
   cursor: pointer;
 }
 .ttsForm__file::after {
   content: "Загрузить файлы";
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 40%;
   right: -1px;
   top: -1px;
@@ -453,13 +526,18 @@ textarea:focus {
   color: #fff;
   text-align: center;
   border-radius: 0 25px 25px 0;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .ttsForm input[type=submit] {
   background: #f00044;
   color: #fff;
-  box-shadow: 0px 9px 36px rgba(91, 0, 177, 0.31);
+  -webkit-box-shadow: 0px 9px 36px rgba(91, 0, 177, 0.31);
+          box-shadow: 0px 9px 36px rgba(91, 0, 177, 0.31);
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
@@ -483,7 +561,8 @@ textarea:focus {
   display: none;
   cursor: pointer;
   position: absolute;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 240px;
   bottom: 100%;
   left: 100%;
@@ -550,7 +629,8 @@ textarea:focus {
 .ttsGrid__item {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 50%;
   padding-left: 56px;
   padding-bottom: 35px;
@@ -578,7 +658,8 @@ textarea:focus {
 }
 @media screen and (max-width: 767px) {
   .ttsBackstage {
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     height: 0;
     padding-bottom: 192%;
     margin-bottom: 60px;
@@ -586,7 +667,8 @@ textarea:focus {
 }
 @media screen and (min-width: 768px) {
   .ttsBackstage {
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     height: 0;
     padding-bottom: 56.14035088%;
     margin-bottom: 80px;
@@ -629,7 +711,7 @@ textarea:focus {
 }
 @media screen and (min-width: 768px) {
   .ttsBackstage__item.i3 {
-    width: 25%;
+    width: 35%;
     top: 0;
     left: 25%;
     height: 100%;
@@ -645,9 +727,9 @@ textarea:focus {
 }
 @media screen and (min-width: 768px) {
   .ttsBackstage__item.i4 {
-    width: 50%;
+    width: 40%;
     height: 50%;
-    left: 50%;
+    left: 60%;
     top: 0;
   }
 }
@@ -661,10 +743,10 @@ textarea:focus {
 }
 @media screen and (min-width: 768px) {
   .ttsBackstage__item.i5 {
-    width: 25%;
+    width: 20%;
     height: 50%;
     top: 50%;
-    left: 50%;
+    left: 60%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -677,10 +759,10 @@ textarea:focus {
 }
 @media screen and (min-width: 768px) {
   .ttsBackstage__item.i6 {
-    width: 25%;
+    width: 20%;
     height: 50%;
     top: 50%;
-    left: 75%;
+    left: 80%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -692,7 +774,8 @@ textarea:focus {
   }
 }
 .ttsBackstage__pic {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: absolute;
@@ -830,12 +913,20 @@ textarea:focus {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: none;
   z-index: 9999;
 }
 .ttsOverlay.iShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
