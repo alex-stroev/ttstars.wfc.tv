@@ -32,7 +32,6 @@ a.link {
   text-decoration: none;
   position: relative;
   display: inline-block;
-  line-height: 1;
 }
 a.link::before {
   position: absolute;
@@ -247,6 +246,9 @@ textarea:focus {
     padding: 0.25em;
     padding-top: 30px;
   }
+}
+.ttsHero a {
+  line-height: 1;
 }
 .ttsSubHero {
   max-width: 760px;
@@ -506,6 +508,14 @@ textarea:focus {
 .ttsForm input[type=file] {
   opacity: 0;
   position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .ttsForm input[type=file] {
+    width: 80%;
+    overflow-x: hidden;
+  }
 }
 .ttsForm__file {
   cursor: pointer;
