@@ -1,6 +1,6 @@
 # README #
 
-Лендинг поиска ведущих [https://ttstars.wfc.tv/](https://ttstars.wfc.tv/)
+Лендинг поиска для Тик-Ток [https://ttstars.wfc.tv/](https://ttstars.wfc.tv/)
 
 ## Сборка проекта ##
 
