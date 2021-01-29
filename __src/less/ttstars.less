@@ -623,9 +623,16 @@ textarea {
         font-size: .7em;
         bottom: 10px;
         left: 60px;
-        color: #fff;
+        @media @tablet {
+            top: 72%;
+            bottom: auto;
+        }
         @media @mobile {
-            left: 20px;
+            left: 10px;
+        }
+        @media @tiny {
+            bottom: auto;
+            top: 65%;
         }
     }
 }
