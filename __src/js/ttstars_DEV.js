@@ -31,7 +31,7 @@ $(document).ready(function () {
     //   Трюк с ДР
     ////////////////////////////////////////////////////////////////
 
-     var bday = $("input[name='birthday']");
+    var bday = $("input[name='birthday']");
     bday.on('focus touchstart', function (event) {
         var $this = $(this);
         $this.get(0).type = 'date';
@@ -163,5 +163,53 @@ $(document).ready(function () {
     // end ready
 });
 
+////////////////////////////////////////////////////////////////
+//  Отправка формы
+////////////////////////////////////////////////////////////////
+$('#wfc_form').on('submit', function (e) {
+    e.preventDefault();
+    jsOverlay = $(".jsOverlay"),
+        form = $('#wfc_form')[0],
+        formData = new FormData(form),
+        successMessage = $(".jsAlert.iSuccess"),
+        dangerMessage = $(".jsAlert.iDanger");
+    // 
+    jsOverlay.addClass('iShow');
+
+
+    $.ajax({
+        cache: false,
+        url: $(this).attr('action'),
+        timeout: 300000,
+        type: 'POST',
+        //dataType: 'json',
+        //data: $(this).serialize(),
+        data: formData,
+        processData: false,
+        contentType: false
+    }).done(
+        function (data) {
+            successMessage.show();
+            jsOverlay.removeClass('iShow');
+            $('#wfc_form').remove();
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".iSuccess").offset().top - 100
+            }, 500);
+        }
+    ).fail(
+        function (data) {
+            dangerMessage.show();
+            jsOverlay.removeClass('iShow');
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".iDanger").offset().top - 150
+            }, 500);
+        }
+    ).always(
+        // function (response) {
+        //     console.log(Object.entries(response));
+        //     console.log("Код ответа сервера: " + response.status);
+        // }
+    );
+});
 
 /////////////////////////////////////////////////////

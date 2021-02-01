@@ -5,55 +5,9 @@
    </div>
 </footer>
 <!-- /.ttsFooter -->
-<div class="ttsOverlay">Пожалуйста, подождите</div>
+<div class="ttsOverlay jsOverlay">Пожалуйста, подождите</div>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script src="js/ttstars.js"></script>
-<script>
-    $('#wfc_form').on('submit', function (e) {
-        e.preventDefault();
-        $('.ttsOverlay').addClass('iShow');
-        //let $form = $(this);
-		var form = $('#wfc_form')[0];
-                var formData = new FormData(form);
-        $('.form_button').attr("disabled", true);
-        $.ajax({
-            cache: false,
-            url: $(this).attr('action'),
-           timeout: 300000,
-            type: 'POST',
-            //dataType: 'json',
-            //data: $(this).serialize(),
-			     data: formData,
-                    processData: false,
-                    contentType: false,
-            success: function (data) {
-                $('.form-success').show();
-                $('.form-danger').hide();
-                // document.getElementById('wfc_form').reset();
-                //$('.form_button').removeAttr("disabled");
-                // $('#wfc_form input, #wfc_form select').attr("disabled", "disabled");
-                $('.ttsOverlay').removeClass('iShow');
-                $('#wfc_form').remove();
-                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $(".iSuccess").offset().top - 100
-                  }, 500);
-            },
-            error: function (e) {
-                $('.form-success').hide();
-                $('.form-danger').show();
-                $('.form_button').removeAttr("disabled");
-                $('.ttsOverlay').removeClass('iShow');
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $(".iDanger").offset().top - 100
-                  }, 500);
-            },
-            fail: function () {
-              // 
-              $('.ttsOverlay').removeClass('iShow');
-            }
-        });
-    });
-</script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
